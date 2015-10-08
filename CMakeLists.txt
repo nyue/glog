@@ -368,6 +368,10 @@ if (WIN32)
   )
 endif (WIN32)
 
+if (NOT WIN32)
+  add_definitions ( -fPIC )
+endif (NOT WIN32)
+
 add_library (glog
   ${GLOG_SRCS}
 )
